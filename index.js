@@ -10,3 +10,5 @@ linkInicio.addEventListener('click', function(event) {
   // Muestra la sección "Inicio"
   seccionInicio.classList.remove('hidden');
 });
+
+/* esto es */
