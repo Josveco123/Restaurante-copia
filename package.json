@@ -1,9 +1,9 @@
 {
   "name": "restaurante",
   "version": "1.0.0",
-  "description": "",
+  "description": "Pagina web para negocios de comida",
   "main": "main.js",
- "scripts": {
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },

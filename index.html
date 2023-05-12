@@ -1,83 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Restaurant</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Restaurant</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;
     700&family=Poller+One&display=swap">
 </head>
+
 <body>
 
-<div class="wrap-header-hero">
-      
+  <div id="home" class="wrap-header-hero">
+
     <header class="main-header">
 
       <div class="header-wrap">
 
-         <div class="wrap-logo-header">
-           <a class="logo-header" href="/">
+        <div class="wrap-logo-header">
+          <a class="logo-header" href="/">
             WebDeRestaurante
-             </a>
-    </div>
+          </a>
+        </div>
 
 
-    <div class="wrap-nav-header">
+        <div class="wrap-nav-header">
 
-      <nav class="nav-header">
-        <input type="checkbox" id="check" placeholder="NO SE QUE VA AQUI">
-        <label for="check" class="checkbtn">
-          <i class="toggle-menu">
-            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM4NCAzODQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTM2OCAxNTQuNjY3OTY5aC0zNTJjLTguODMyMDMxIDAtMTYtNy4xNjc5NjktMTYtMTZzNy4xNjc5NjktMTYgMTYtMTZoMzUyYzguODMyMDMxIDAgMTYgNy4xNjc5NjkgMTYgMTZzLTcuMTY3OTY5IDE2LTE2IDE2em0wIDAiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0zNjggMzJoLTM1MmMtOC44MzIwMzEgMC0xNi03LjE2Nzk2OS0xNi0xNnM3LjE2Nzk2OS0xNiAxNi0xNmgzNTJjOC44MzIwMzEgMCAxNiA3LjE2Nzk2OSAxNiAxNnMtNy4xNjc5NjkgMTYtMTYgMTZ6bTAgMCIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTM2OCAyNzcuMzMyMDMxaC0zNTJjLTguODMyMDMxIDAtMTYtNy4xNjc5NjktMTYtMTZzNy4xNjc5NjktMTYgMTYtMTZoMzUyYzguODMyMDMxIDAgMTYgNy4xNjc5NjkgMTYgMTZzLTcuMTY3OTY5IDE2LTE2IDE2em0wIDAiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiPjwvcGF0aD48L2c+PC9zdmc+" />
-          </i>
-        </label>
-        <ul class="main-menu">
-          <li class="menu-item"><a href="index.html">Inicio</a></li>
-          <li class="menu-item"><a href="">Nostros</a></li>
-          <li class="menu-item"><a href="#carta">Carta</a></li>
-          <li class="menu-item"><a href="#blog">Blog</a></li>
-          <li id="nav-main-contact" class="menu-item"><a href="">Contacto</a></li>
-        </ul>
+          <nav class="nav-header">
+            <input type="checkbox" id="check" placeholder="NO SE QUE VA AQUI">
+            <label for="check" class="checkbtn">
+              <i class="toggle-menu">
+                <img
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM4NCAzODQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTM2OCAxNTQuNjY3OTY5aC0zNTJjLTguODMyMDMxIDAtMTYtNy4xNjc5NjktMTYtMTZzNy4xNjc5NjktMTYgMTYtMTZoMzUyYzguODMyMDMxIDAgMTYgNy4xNjc5NjkgMTYgMTZzLTcuMTY3OTY5IDE2LTE2IDE2em0wIDAiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0zNjggMzJoLTM1MmMtOC44MzIwMzEgMC0xNi03LjE2Nzk2OS0xNi0xNnM3LjE2Nzk2OS0xNiAxNi0xNmgzNTJjOC44MzIwMzEgMCAxNiA3LjE2Nzk2OSAxNiAxNnMtNy4xNjc5NjkgMTYtMTYgMTZ6bTAgMCIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTM2OCAyNzcuMzMyMDMxaC0zNTJjLTguODMyMDMxIDAtMTYtNy4xNjc5NjktMTYtMTZzNy4xNjc5NjktMTYgMTYtMTZoMzUyYzguODMyMDMxIDAgMTYgNy4xNjc5NjkgMTYgMTZzLTcuMTY3OTY5IDE2LTE2IDE2em0wIDAiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiPjwvcGF0aD48L2c+PC9zdmc+" />
+              </i>
+            </label>
+            <ul class="main-menu">
+              <li class="menu-item"><a href="/index.html">Inicio</a></li>
+              <li class="menu-item"><a href="#">Nostros</a></li>
+              <li class="menu-item"><a href="#">Carta</a></li>
+              <li class="menu-item"><a href="#blog">Blog</a></li>
+              <li id="nav-main-contact" class="menu-item"><a href="">Contacto</a></li>
+            </ul>
 
-      </nav>
+          </nav>
 
-    </div>
+        </div>
+
+      </div>
+
+    </header>
+
+    <main class="main-section">
+
+      <section class="hero-home-page">
+        <div id="publico">
+          <div id="graba">
+            <video src="/img/videoInit.mp4" type="video/mp4" with="200px" height="240px" controls autoplay loop>
+            </video>
+          </div>
+          <div id="localizacion">
+            <img src="/img/ubicacion.jpg" alt="" style="width: 280px; height: 240px;">
+          </div>
+        </div>
+        <div id="carrusel">
+          <section id="tranding">
+
+            <div class="container-carrusel">
+              <div class="swiper tranding-slider">
+                <div class="swiper-wrapper">
+                  <!-- Slide-start -->
+                  <div class="swiper-slide tranding-slide">
+                    <div class="tranding-slide-img">
+                      <img src="images/tranding-food-1.png" alt="Tranding">
+                    </div>
+                    <div class="tranding-slide-content">
+                      <h1 class="food-price">$20</h1>
+                      <div class="tranding-slide-content-bottom">
+                        <h2 class="food-name">
+                          Special Pizza
+                        </h2>
+                        <h3 class="food-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide-end -->
+                  <!-- Slide-start -->
+                  <div class="swiper-slide tranding-slide">
+                    <div class="tranding-slide-img">
+                      <img src="images/tranding-food-2.png" alt="Tranding">
+                    </div>
+                    <div class="tranding-slide-content">
+                      <h1 class="food-price">$20</h1>
+                      <div class="tranding-slide-content-bottom">
+                        <h2 class="food-name">
+                          Meat Ball
+                        </h2>
+                        <h3 class="food-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide-end -->
+                  <!-- Slide-start -->
+                  <div class="swiper-slide tranding-slide">
+                    <div class="tranding-slide-img">
+                      <img src="images/tranding-food-3.png" alt="Tranding">
+                    </div>
+                    <div class="tranding-slide-content">
+                      <h1 class="food-price">$40</h1>
+                      <div class="tranding-slide-content-bottom">
+                        <h2 class="food-name">
+                          Burger
+                        </h2>
+                        <h3 class="food-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide-end -->
+                  <!-- Slide-start -->
+                  <div class="swiper-slide tranding-slide">
+                    <div class="tranding-slide-img">
+                      <img src="images/tranding-food-4.png" alt="Tranding">
+                    </div>
+                    <div class="tranding-slide-content">
+                      <h1 class="food-price">$15</h1>
+                      <div class="tranding-slide-content-bottom">
+                        <h2 class="food-name">
+                          Frish Curry
+                        </h2>
+                        <h3 class="food-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide-end -->
+                  <!-- Slide-start -->
+                  <div class="swiper-slide tranding-slide">
+                    <div class="tranding-slide-img">
+                      <img src="images/tranding-food-5.png" alt="Tranding">
+                    </div>
+                    <div class="tranding-slide-content">
+                      <h1 class="food-price">$15</h1>
+                      <div class="tranding-slide-content-bottom">
+                        <h2 class="food-name">
+                          Pane Cake
+                        </h2>
+                        <h3 class="food-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide-end -->
+                  <!-- Slide-start -->
+                  <div class="swiper-slide tranding-slide">
+                    <div class="tranding-slide-img">
+                      <img src="images/tranding-food-6.png" alt="Tranding">
+                    </div>
+                    <div class="tranding-slide-content">
+                      <h1 class="food-price">$20</h1>
+                      <div class="tranding-slide-content-bottom">
+                        <h2 class="food-name">
+                          Vanilla cake
+                        </h2>
+                        <h3 class="food-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide-end -->
+                  <!-- Slide-start -->
+                  <div class="swiper-slide tranding-slide">
+                    <div class="tranding-slide-img">
+                      <img src="images/tranding-food-7.png" alt="Tranding">
+                    </div>
+                    <div class="tranding-slide-content">
+                      <h1 class="food-price">$8</h1>
+                      <div class="tranding-slide-content-bottom">
+                        <h2 class="food-name">
+                          Straw Cake
+                        </h2>
+                        <h3 class="food-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide-end -->
+                </div>
+
+                <div class="tranding-slider-control">
+                  <div class="swiper-button-prev slider-arrow">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                  </div>
+                  <div class="swiper-button-next slider-arrow">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+
+      </section>
+
+    </main>
 
   </div>
 
-  </header>
+  <!-- Cierre de la etiqueta main -->
 
-  <main class="main-section">
-    <section class="hero-home-page">
-      <div class="wrap-hero-home-page">
-
-   <h1>Proceso para comprar</h1>
-   <p>Para hacer un pedido solamente sigue los siguientes pasos: 
-    Si ya tienes una cuenta hay que ingresar con tu usuario y contraseña 
-    aquí de lo contrario tienes que registrarte aquí por la pegstaña registro o
-    llamar al restaurante. Seleccionar y anota los codigos de las comidas a pedir
-    suma los valores entra con el codiigo de pago aqui proporciando, obten los datos
-    del pago y envialos ya sea por whasapp o correo al Restaurante en 30 minutos 
-    llegara su pedido.</p>
-    <div class="datos-pago">
-  <a href="" class="cta-main">hacer un pedido</a>
-  <a id="aqr" href="" class="cta-main">codigo QR pagos</a>
-  <img id="imagenqr" src="img/QR.jpg" alt="">
-
-</div>
-    </div>
-    </section>
-
-  </main>  
-
-</div>
-
-    <!-- Cierre de la etiqueta main -->  
-
-    <!-- Tarjetas de comida -->
-     <section id="carta" class="wrap section">
+  <!-- Tarjetas de comida -->
+  <section id="carta" class="wrap section">
     <div class="wrap-title-section">
       <h2>Tarjetas de Comida</h2>
     </div>
@@ -85,7 +282,9 @@
       <div style="background:url(img/plato1.jpg)center;background-size: cover;" class="tarjeta-rest">
         <div class="wrap-text_tarjeta-rest">
           <h3>Espaguetis Arcoiris</h3>
-          <p>El nombre boloñesa o bolognesa viene de su lugar de origen, la ciudad de Bolonia en Italia. Su origen se cree que viene en la edad media, cuando su elaboración era completamente diferente a lo que se conoce hoy en día.</p>
+          <p>El nombre boloñesa o bolognesa viene de su lugar de origen, la ciudad de Bolonia en Italia. Su origen se
+            cree que viene en la edad media, cuando su elaboración era completamente diferente a lo que se conoce hoy en
+            día.</p>
           <div class="cta-wrap_tarjeta-rest">
             <div class="precio_tarjeta-rest">
               <span>$ 123.456</span>
@@ -94,7 +293,7 @@
               <a href="">Pedir ahora</a>
             </div>
           </div>
-        </div>  
+        </div>
       </div>
       <div style="background:url(img/plato2.jpg)center;background-size: cover;" class="tarjeta-rest">
         <div class="wrap-text_tarjeta-rest">
@@ -108,7 +307,7 @@
               <a href="">Pedir ahora</a>
             </div>
           </div>
-        </div>  
+        </div>
       </div>
       <div style="background:url(img/plato3.jpg)center;background-size: cover;" class="tarjeta-rest">
         <div class="wrap-text_tarjeta-rest">
@@ -122,7 +321,7 @@
               <a href="">Pedir ahora</a>
             </div>
           </div>
-        </div>  
+        </div>
       </div>
       <div style="background:url(img/plato4.jpg)center;background-size: cover;" class="tarjeta-rest">
         <div class="wrap-text_tarjeta-rest">
@@ -136,67 +335,67 @@
               <a href="">Pedir ahora</a>
             </div>
           </div>
-        </div>  
+        </div>
       </div>
     </div>
   </section>
 
-<!-- Menu Restaurante -->
-<section class="wrap section">
+  <!-- Menu Restaurante -->
+  <section class="wrap section">
     <div class="wrap-title-section">
       <h2>Menús de Restaurante</h2>
     </div>
     <div class="column-3 columns">
       <div style="background: url(img/menu.jpg) center;background-size: cover;" class="menu-restaurante">
         <h3>Menú mediodia</h3>
-      <hr>
-      <h4>Primeros Platos</h4>
-      <p> Ensalada de pollo.</p>
-      <p>Crema de espinaca.</p>
-      <p>Estofado de pavo.</p>
-      <p>LPasta con palta.</p>
-      <br>
-      <h4>Segundos Platos</h4>
-      <p> Lasañade carne.</p>
-      <p>Pollo al ajillo en salsa de tomate.</p>
-      <p>Macarrones con queso.</p>
-      <p>Sopa de pollo y vegetales.</p>
-      <br>
-      <p class="precio-menu">Precio: <span >$ 57.000</span></p>
+        <hr>
+        <h4>Primeros Platos</h4>
+        <p> Ensalada de pollo.</p>
+        <p>Crema de espinaca.</p>
+        <p>Estofado de pavo.</p>
+        <p>LPasta con palta.</p>
+        <br>
+        <h4>Segundos Platos</h4>
+        <p> Lasañade carne.</p>
+        <p>Pollo al ajillo en salsa de tomate.</p>
+        <p>Macarrones con queso.</p>
+        <p>Sopa de pollo y vegetales.</p>
+        <br>
+        <p class="precio-menu">Precio: <span>$ 57.000</span></p>
       </div>
       <div style="background: url(img/menu.jpg) center;background-size: cover;" class="menu-restaurante">
-      <h3>Menú noche</h3>
-      <hr>
-      <h4>Primeros Platos</h4>
-      <p>Lorem, ipsum dolor.</p>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <p>Lorem, ipsum.</p>
-      <p>Lorem ipsum dolor sit amet consectetur.</p>
-      <br>
-      <h4>Segundos Platos</h4>
-      <p>Lorem, ipsum dolor.</p>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <p>Lorem, ipsum.</p>
-      <p>Lorem ipsum dolor sit amet consectetur.</p>
-      <br>
-      <p class="precio-menu">Precio: <span >$ 222.222</span></p>
+        <h3>Menú noche</h3>
+        <hr>
+        <h4>Primeros Platos</h4>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <br>
+        <h4>Segundos Platos</h4>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <br>
+        <p class="precio-menu">Precio: <span>$ 222.222</span></p>
       </div>
       <div style="background: url(img/menu.jpg) center;background-size: cover;" class="menu-restaurante">
         <h3>Menú fin de semana</h3>
-      <hr>
-      <h4>Primeros Platos</h4>
-      <p>Lorem, ipsum dolor.</p>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <p>Lorem, ipsum.</p>
-      <p>Lorem ipsum dolor sit amet consectetur.</p>
-      <br>
-      <h4>Segundos Platos</h4>
-      <p>Lorem, ipsum dolor.</p>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <p>Lorem, ipsum.</p>
-      <p>Lorem ipsum dolor sit amet consectetur.</p>
-      <br>
-      <p class="precio-menu">Precio: <span >$ 45.433</span></p>
+        <hr>
+        <h4>Primeros Platos</h4>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <br>
+        <h4>Segundos Platos</h4>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <br>
+        <p class="precio-menu">Precio: <span>$ 45.433</span></p>
       </div>
     </div>
   </section>
@@ -255,12 +454,12 @@
         <h3 class="titulo-galeria">Lonchas en manjar</h3>
         <img src="img/plato12.jpg" alt="">
       </div>
-      
+
     </div>
   </section>
 
-   <!-- Articulos de Blog  -->
-   <section id="blog" class="section">
+  <!-- Articulos de Blog  -->
+  <section id="blog" class="section">
     <div class="wrap-title-section">
       <h2>Artículos del Blog</h2>
     </div>
@@ -275,7 +474,10 @@
           </div>
           <div class="texto-card">
             <h3>Cookie y Kate.</h3>
-            <p>El blog Cookie and Kate, centrado en la alimentación vegetariana sostenible, hace un trabajo fantástico al combinar los temas de la alimentación y el estilo de vida. La propietaria del sitio, Kate, y su perro Cookie aparecen en muchas de las fotos del blog, lo que añade un toque realmente personal al contenido?</p>
+            <p>El blog Cookie and Kate, centrado en la alimentación vegetariana sostenible, hace un trabajo fantástico
+              al combinar los temas de la alimentación y el estilo de vida. La propietaria del sitio, Kate, y su perro
+              Cookie aparecen en muchas de las fotos del blog, lo que añade un toque realmente personal al contenido?
+            </p>
           </div>
           <div class="perfil-card">
             <div class="img-perfil-card">
@@ -298,7 +500,10 @@
           </div>
           <div class="texto-card">
             <h3>Cocinar con clase.</h3>
-            <p>Cooking Classy fue creada por la bloguera gastronómica Jaclyn, que se esfuerza por compartir con sus seguidores recetas fácilmente accesibles y sin complicaciones. En lugar de centrarse en un solo tipo de cocina, las recetas aquí son diversas y representan alimentos de todo el mundo. También comparte consejos para crear sus propios alimentos básicos, como el pan rallado casero.</p>
+            <p>Cooking Classy fue creada por la bloguera gastronómica Jaclyn, que se esfuerza por compartir con sus
+              seguidores recetas fácilmente accesibles y sin complicaciones. En lugar de centrarse en un solo tipo de
+              cocina, las recetas aquí son diversas y representan alimentos de todo el mundo. También comparte consejos
+              para crear sus propios alimentos básicos, como el pan rallado casero.</p>
           </div>
           <div class="perfil-card">
             <div class="img-perfil-card">
@@ -321,7 +526,9 @@
           </div>
           <div class="texto-card">
             <h3>Brown Eyed Baker.</h3>
-            <p>El blog Brown Eyed Baker se ha creado para ayudar a la gente corriente a desarrollar sus habilidades culinarias y a seleccionar recetas. Aunque se centra en la repostería, también se pueden encontrar recetas de otras categorías, como desayunos, bebidas e incluso golosinas para perros. ?</p>
+            <p>El blog Brown Eyed Baker se ha creado para ayudar a la gente corriente a desarrollar sus habilidades
+              culinarias y a seleccionar recetas. Aunque se centra en la repostería, también se pueden encontrar recetas
+              de otras categorías, como desayunos, bebidas e incluso golosinas para perros. ?</p>
           </div>
           <div class="perfil-card">
             <div class="img-perfil-card">
@@ -341,7 +548,8 @@
     <div class="wrap-footer">
       <div class="text-element-footer element-footer">
         <h3>Restaurante</h3>
-        <p>Cuando se trata promover un nuevo restaurante, muchos propietarios y gerentes cometen el error común de postergar el marketing hasta después de la apertura.</p>
+        <p>Cuando se trata promover un nuevo restaurante, muchos propietarios y gerentes cometen el error común de
+          postergar el marketing hasta después de la apertura.</p>
       </div>
       <div class="text-element-footer element-footer">
         <h5>Dirección</h5>
@@ -366,14 +574,20 @@
         <h5>Redes Sociales</h5>
         <ul>
           <li><a href="/">
-            <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtNTEyIDc1djM2MmMwIDQxLjM5ODQzOC0zMy42MDE1NjIgNzUtNzUgNzVoLTEyMWwtMzAtMzBoLTMwbC0zMCAzMGgtMTUxYy00MS4zOTg0MzggMC03NS0zMy42MDE1NjItNzUtNzV2LTM2MmMwLTQxLjM5ODQzOCAzMy42MDE1NjItNzUgNzUtNzVoMzYyYzQxLjM5ODQzOCAwIDc1IDMzLjYwMTU2MiA3NSA3NXptMCAwIiBmaWxsPSIjNzk4NGViIi8+PHBhdGggZD0ibTUxMiA3NXYzNjJjMCA0MS4zOTg0MzgtMzMuNjAxNTYyIDc1LTc1IDc1aC0xMjFsLTMwLTMwaC0xNXYtNDgyaDE2NmM0MS4zOTg0MzggMCA3NSAzMy42MDE1NjIgNzUgNzV6bTAgMCIgZmlsbD0iIzQ2NjFkMSIvPjxwYXRoIGQ9Im0zMTYgMTgwdjYwaDkwbC0xNSA5MGgtNzV2MTgyaC05MHYtMTgyaC02MHYtOTBoNjB2LTYwYzAtMzMuMzAwNzgxIDE4LjMwMDc4MS02Mi40MDIzNDQgNDUtNzggMTMuMTk5MjE5LTcuNSAyOC44MDA3ODEtMTIgNDUtMTJoOTB2OTB6bTAgMCIgZmlsbD0iI2VjZWNmMSIvPjxwYXRoIGQ9Im0zMTYgMTgwdjYwaDkwbC0xNSA5MGgtNzV2MTgyaC00NXYtNDEwYzEzLjE5OTIxOS03LjUgMjguODAwNzgxLTEyIDQ1LTEyaDkwdjkwem0wIDAiIGZpbGw9IiNlMmUyZTciLz48L3N2Zz4=" alt="icono redes sociales">
-          </a></li>
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtNTEyIDc1djM2MmMwIDQxLjM5ODQzOC0zMy42MDE1NjIgNzUtNzUgNzVoLTEyMWwtMzAtMzBoLTMwbC0zMCAzMGgtMTUxYy00MS4zOTg0MzggMC03NS0zMy42MDE1NjItNzUtNzV2LTM2MmMwLTQxLjM5ODQzOCAzMy42MDE1NjItNzUgNzUtNzVoMzYyYzQxLjM5ODQzOCAwIDc1IDMzLjYwMTU2MiA3NSA3NXptMCAwIiBmaWxsPSIjNzk4NGViIi8+PHBhdGggZD0ibTUxMiA3NXYzNjJjMCA0MS4zOTg0MzgtMzMuNjAxNTYyIDc1LTc1IDc1aC0xMjFsLTMwLTMwaC0xNXYtNDgyaDE2NmM0MS4zOTg0MzggMCA3NSAzMy42MDE1NjIgNzUgNzV6bTAgMCIgZmlsbD0iIzQ2NjFkMSIvPjxwYXRoIGQ9Im0zMTYgMTgwdjYwaDkwbC0xNSA5MGgtNzV2MTgyaC05MHYtMTgyaC02MHYtOTBoNjB2LTYwYzAtMzMuMzAwNzgxIDE4LjMwMDc4MS02Mi40MDIzNDQgNDUtNzggMTMuMTk5MjE5LTcuNSAyOC44MDA3ODEtMTIgNDUtMTJoOTB2OTB6bTAgMCIgZmlsbD0iI2VjZWNmMSIvPjxwYXRoIGQ9Im0zMTYgMTgwdjYwaDkwbC0xNSA5MGgtNzV2MTgyaC00NXYtNDEwYzEzLjE5OTIxOS03LjUgMjguODAwNzgxLTEyIDQ1LTEyaDkwdjkwem0wIDAiIGZpbGw9IiNlMmUyZTciLz48L3N2Zz4="
+                alt="icono redes sociales">
+            </a></li>
           <li><a href="">
-            <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIC0zMSA1MTIgNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0yMTEgMjcwLTQwLjkxNzk2OSA0My42NzU3ODEgMTAuOTE3OTY5IDc2LjMyNDIxOSAxMjAtOTB6bTAgMCIgZmlsbD0iIzAwYzBmMSIvPjxwYXRoIGQ9Im0wIDE4MCAxMjEgNjAgOTAgMzAgMjEwIDE4MCA5MS00NTB6bTAgMCIgZmlsbD0iIzc2ZTJmOCIvPjxwYXRoIGQ9Im0xMjEgMjQwIDYwIDE1MCAzMC0xMjAgMjEwLTE4MHptMCAwIiBmaWxsPSIjMjVkOWY4Ii8+PC9zdmc+" alt="icono redes sociales">
-          </a></li>
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIC0zMSA1MTIgNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0yMTEgMjcwLTQwLjkxNzk2OSA0My42NzU3ODEgMTAuOTE3OTY5IDc2LjMyNDIxOSAxMjAtOTB6bTAgMCIgZmlsbD0iIzAwYzBmMSIvPjxwYXRoIGQ9Im0wIDE4MCAxMjEgNjAgOTAgMzAgMjEwIDE4MCA5MS00NTB6bTAgMCIgZmlsbD0iIzc2ZTJmOCIvPjxwYXRoIGQ9Im0xMjEgMjQwIDYwIDE1MCAzMC0xMjAgMjEwLTE4MHptMCAwIiBmaWxsPSIjMjVkOWY4Ii8+PC9zdmc+"
+                alt="icono redes sociales">
+            </a></li>
           <li><a href="">
-            <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMjU2IDBjLTE0MC42OTkyMTkgMC0yNTYgMTE1LjMwMDc4MS0yNTYgMjU2IDAgNDYuNSAxMi41OTc2NTYgOTEuNSAzNi4zMDA3ODEgMTMxLjEwMTU2MmwtMzYuMzAwNzgxIDEyNC44OTg0MzggMTI0Ljg5ODQzOC0zNi4zMDA3ODFjMzkuNjAxNTYyIDIzLjY5OTIxOSA4NC42MDE1NjIgMzYuMzAwNzgxIDEzMS4xMDE1NjIgMzYuMzAwNzgxIDE0MC42OTkyMTkgMCAyNTYtMTE1LjMwMDc4MSAyNTYtMjU2cy0xMTUuMzAwNzgxLTI1Ni0yNTYtMjU2em0wIDAiIGZpbGw9IiMwMGRkN2IiLz48cGF0aCBkPSJtNTEyIDI1NmMwIDE0MC42OTkyMTktMTE1LjMwMDc4MSAyNTYtMjU2IDI1NnYtNTEyYzE0MC42OTkyMTkgMCAyNTYgMTE1LjMwMDc4MSAyNTYgMjU2em0wIDAiIGZpbGw9IiMwMGNjNzEiLz48cGF0aCBkPSJtNDE3LjE5OTIxOSAzNjQuMzAwNzgxLTEyIDExLjY5OTIxOWMtMTYuODAwNzgxIDE2LjgwMDc4MS01NS44MDA3ODEgMTUuNTk3NjU2LTgwLjY5OTIxOSAxMC44MDA3ODEtMjIuMTk5MjE5LTQuMTk5MjE5LTQ2LTE0LjEwMTU2Mi02OC41LTI3LjkwMjM0My02MS4xOTkyMTktMzcuMTk5MjE5LTExNi42OTkyMTktMTAzLjE5OTIxOS0xMzAuMTk5MjE5LTE2Mi41OTc2NTctOS4zMDA3ODEtNDAuMjAzMTI1LTQuMTk5MjE5LTc1IDktODguNWwxMi0xMmM2LjYwMTU2My02LjMwMDc4MSAxNy4wOTc2NTctNi4zMDA3ODEgMjMuNjk5MjE5IDBsNDcuNjk5MjE5IDQ3LjY5OTIxOWMzLjMwMDc4MSAzLjMwMDc4MSA1LjEwMTU2MiA3LjUgNS4xMDE1NjIgMTJzLTEuODAwNzgxIDguNjk5MjE5LTUuMTAxNTYyIDEybC0xMiAxMS42OTkyMTljLTEyLjg5ODQzOCAxMy4xOTkyMTktMTIuODk4NDM4IDM0LjUgMCA0Ny42OTkyMTlsNDkuODAwNzgxIDQ4LjkwMjM0MyAyOS4wOTc2NTYgMjguODAwNzgxYzEzLjIwMzEyNSAxMy4xOTkyMTkgMzUuNTAzOTA2IDEzLjE5OTIxOSA0OC43MDMxMjUgMGwxMS42OTkyMTktMTIuMDAzOTA2YzYuMzAwNzgxLTYgMTcuNjk5MjE5LTYgMjQgMGw0Ny42OTkyMTkgNDcuNzAzMTI1YzYuMzAwNzgxIDYuNTk3NjU3IDYuNjAxNTYyIDE3LjA5NzY1NyAwIDI0em0wIDAiIGZpbGw9IiNlY2VjZjEiLz48cGF0aCBkPSJtNDE3LjE5OTIxOSAzNjQuMzAwNzgxLTEyIDExLjY5OTIxOWMtMTYuODAwNzgxIDE2LjgwMDc4MS01NS44MDA3ODEgMTUuNTk3NjU2LTgwLjY5OTIxOSAxMC44MDA3ODEtMjIuMTk5MjE5LTQuMTk5MjE5LTQ2LTE0LjEwMTU2Mi02OC41LTI3LjkwMjM0M3YtODMuMDk3NjU3bDI5LjA5NzY1NiAyOC44MDA3ODFjMTMuMjAzMTI1IDEzLjE5OTIxOSAzNS41MDM5MDYgMTMuMTk5MjE5IDQ4LjcwMzEyNSAwbDExLjY5OTIxOS0xMi4wMDM5MDZjNi4zMDA3ODEtNiAxNy42OTkyMTktNiAyNCAwbDQ3LjY5OTIxOSA0Ny43MDMxMjVjNi4zMDA3ODEgNi41OTc2NTcgNi42MDE1NjIgMTcuMDk3NjU3IDAgMjR6bTAgMCIgZmlsbD0iI2UyZTJlNyIvPjwvc3ZnPg==" alt="icono redes sociales">
-          </a></li>
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMjU2IDBjLTE0MC42OTkyMTkgMC0yNTYgMTE1LjMwMDc4MS0yNTYgMjU2IDAgNDYuNSAxMi41OTc2NTYgOTEuNSAzNi4zMDA3ODEgMTMxLjEwMTU2MmwtMzYuMzAwNzgxIDEyNC44OTg0MzggMTI0Ljg5ODQzOC0zNi4zMDA3ODFjMzkuNjAxNTYyIDIzLjY5OTIxOSA4NC42MDE1NjIgMzYuMzAwNzgxIDEzMS4xMDE1NjIgMzYuMzAwNzgxIDE0MC42OTkyMTkgMCAyNTYtMTE1LjMwMDc4MSAyNTYtMjU2cy0xMTUuMzAwNzgxLTI1Ni0yNTYtMjU2em0wIDAiIGZpbGw9IiMwMGRkN2IiLz48cGF0aCBkPSJtNTEyIDI1NmMwIDE0MC42OTkyMTktMTE1LjMwMDc4MSAyNTYtMjU2IDI1NnYtNTEyYzE0MC42OTkyMTkgMCAyNTYgMTE1LjMwMDc4MSAyNTYgMjU2em0wIDAiIGZpbGw9IiMwMGNjNzEiLz48cGF0aCBkPSJtNDE3LjE5OTIxOSAzNjQuMzAwNzgxLTEyIDExLjY5OTIxOWMtMTYuODAwNzgxIDE2LjgwMDc4MS01NS44MDA3ODEgMTUuNTk3NjU2LTgwLjY5OTIxOSAxMC44MDA3ODEtMjIuMTk5MjE5LTQuMTk5MjE5LTQ2LTE0LjEwMTU2Mi02OC41LTI3LjkwMjM0My02MS4xOTkyMTktMzcuMTk5MjE5LTExNi42OTkyMTktMTAzLjE5OTIxOS0xMzAuMTk5MjE5LTE2Mi41OTc2NTctOS4zMDA3ODEtNDAuMjAzMTI1LTQuMTk5MjE5LTc1IDktODguNWwxMi0xMmM2LjYwMTU2My02LjMwMDc4MSAxNy4wOTc2NTctNi4zMDA3ODEgMjMuNjk5MjE5IDBsNDcuNjk5MjE5IDQ3LjY5OTIxOWMzLjMwMDc4MSAzLjMwMDc4MSA1LjEwMTU2MiA3LjUgNS4xMDE1NjIgMTJzLTEuODAwNzgxIDguNjk5MjE5LTUuMTAxNTYyIDEybC0xMiAxMS42OTkyMTljLTEyLjg5ODQzOCAxMy4xOTkyMTktMTIuODk4NDM4IDM0LjUgMCA0Ny42OTkyMTlsNDkuODAwNzgxIDQ4LjkwMjM0MyAyOS4wOTc2NTYgMjguODAwNzgxYzEzLjIwMzEyNSAxMy4xOTkyMTkgMzUuNTAzOTA2IDEzLjE5OTIxOSA0OC43MDMxMjUgMGwxMS42OTkyMTktMTIuMDAzOTA2YzYuMzAwNzgxLTYgMTcuNjk5MjE5LTYgMjQgMGw0Ny42OTkyMTkgNDcuNzAzMTI1YzYuMzAwNzgxIDYuNTk3NjU3IDYuNjAxNTYyIDE3LjA5NzY1NyAwIDI0em0wIDAiIGZpbGw9IiNlY2VjZjEiLz48cGF0aCBkPSJtNDE3LjE5OTIxOSAzNjQuMzAwNzgxLTEyIDExLjY5OTIxOWMtMTYuODAwNzgxIDE2LjgwMDc4MS01NS44MDA3ODEgMTUuNTk3NjU2LTgwLjY5OTIxOSAxMC44MDA3ODEtMjIuMTk5MjE5LTQuMTk5MjE5LTQ2LTE0LjEwMTU2Mi02OC41LTI3LjkwMjM0M3YtODMuMDk3NjU3bDI5LjA5NzY1NiAyOC44MDA3ODFjMTMuMjAzMTI1IDEzLjE5OTIxOSAzNS41MDM5MDYgMTMuMTk5MjE5IDQ4LjcwMzEyNSAwbDExLjY5OTIxOS0xMi4wMDM5MDZjNi4zMDA3ODEtNiAxNy42OTkyMTktNiAyNCAwbDQ3LjY5OTIxOSA0Ny43MDMxMjVjNi4zMDA3ODEgNi41OTc2NTcgNi42MDE1NjIgMTcuMDk3NjU3IDAgMjR6bTAgMCIgZmlsbD0iI2UyZTJlNyIvPjwvc3ZnPg=="
+                alt="icono redes sociales">
+            </a></li>
         </ul>
       </div>
     </div>
@@ -390,6 +604,7 @@
       </div>
     </div>
   </footer>
-<script src="/qr.js">console.log('hola ok')</script>
+  <script src="/qr.js">console.log('hola ok')</script>
 </body>
+
 </html>
