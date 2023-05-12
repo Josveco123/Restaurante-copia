@@ -13,3 +13,4 @@ linkInicio.addEventListener('click', function(event) {
     miImagen.style.display = 'none';
   }
 });
+
