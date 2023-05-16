@@ -1,16 +1,25 @@
-
-const miImagen = document.getElementById('imagenqr');
-
-const linkInicio = document.getElementById('aqr');
-
-linkInicio.addEventListener('click', function(event) {
-  // Evita que el enlace cambie de página
-  event.preventDefault();
-
-  if (miImagen.style.display === 'none') {
-    miImagen.style.display = 'block';
-  } else {
-    miImagen.style.display = 'none';
-  }
+// mostrar y desplazar el botton de regreso
+const goToTopButton = document.getElementById("ir-a-inicio");
+goToTopButton.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+  document.querySelector("#ir-a-inicio").setAttribute("style", "display: none;");
+  setTimeout(() => {
+    window.location.href = "#home";
+  }, 1000);
 });
 
+
+
+var prevScrollpos = window.pageYOffset;
+window.addEventListener('scroll', function() {
+  var currentScrollPos = window.pageYOffset;
+  if (currentScrollPos> 100) {
+    document.querySelector("#ir-a-inicio").setAttribute("style", "display: block;");
+  } else {
+    document.querySelector("#ir-a-inicio").setAttribute("style", "display: none;");
+  }
+
+});

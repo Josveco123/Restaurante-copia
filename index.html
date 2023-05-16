@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Restaurant</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poller+One&display=swap">
@@ -20,13 +21,14 @@
       <div class="header-wrap">
 
         <div class="wrap-logo-header">
-          <a class="logo-header" href="/">
-            WebDeRestaurante
+          <a class="logo-header">
+            <img id="logo" src="/img/logo.jpg" alt="">
           </a>
+          <p id="direccion">Calle 27 # 16a-82 <br>Sincelejo-sucre </p>
         </div>
 
 
-        <div class="wrap-nav-header">
+        <div id="navbar" class="wrap-nav-header">
 
           <nav class="nav-header">
             <input type="checkbox" id="check" placeholder="NO SE QUE VA AQUI">
@@ -37,11 +39,11 @@
               </i>
             </label>
             <ul class="main-menu">
-              <li class="menu-item"><a href="/index.html">Inicio</a></li>
-              <li class="menu-item"><a href="#galeria">Galeria Opciones</a></li>
+              <li class="menu-item"><a href="#home">Inicio</a></li>
               <li class="menu-item"><a href="#carta">Recomendados</a></li>
+              <li class="menu-item"><a href="#menu">Menu</a></li>
               <li class="menu-item"><a href="#blog">Blog</a></li>
-              <li id="nav-main-contact" class="menu-item"><a href="">Contacto</a></li>
+              <li id="nav-main-contact" class="menu-item"><a href="/user.html" target="_blank">Contacto</a></li>
             </ul>
 
           </nav>
@@ -259,6 +261,7 @@
             </div>
           </section>
         </div>
+
       </section>
 
     </main>
@@ -268,6 +271,7 @@
   <!-- Cierre de la etiqueta main -->
 
   <!-- Tarjetas de comida -->
+
   <section id="carta" class="wrap section">
     <div class="wrap-title-section">
       <h2>Tarjetas de Comida</h2>
@@ -335,7 +339,7 @@
   </section>
 
   <!-- Menu Restaurante -->
-  <section class="wrap section">
+  <section id="menu" class="wrap section">
     <div class="wrap-title-section">
       <h2>Menús de Restaurante</h2>
     </div>
@@ -395,7 +399,7 @@
   </section>
 
   <!-- Galería de imágenes -->
-  <section id="galeria" class="section">
+  <section class="section">
     <div class="wrap-title-section">
       <h2>Galería de imágenes</h2>
     </div>
@@ -451,7 +455,6 @@
 
     </div>
   </section>
-
   <!-- Articulos de Blog  -->
   <section id="blog" class="section">
     <div class="wrap-title-section">
@@ -598,11 +601,15 @@
       </div>
     </div>
   </footer>
-  <script src="/contacto.js"></script>
+
+  <button id="ir-a-inicio" class="no-navbar">Ir a Inicio</button>
+
+  <script src="/qr.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
+
 </body>
 
 </html>
