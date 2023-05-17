@@ -12,7 +12,6 @@ goToTopButton.addEventListener("click", function() {
 });
 
 
-
 var prevScrollpos = window.pageYOffset;
 window.addEventListener('scroll', function() {
   var currentScrollPos = window.pageYOffset;
@@ -21,5 +20,40 @@ window.addEventListener('scroll', function() {
   } else {
     document.querySelector("#ir-a-inicio").setAttribute("style", "display: none;");
   }
-
 });
+
+/*    inico de ocultar menu opciones -------------------*/
+
+var checkbox = document.querySelector('.toggle-menu img');
+var isHovered = false;
+
+checkbox.addEventListener('click', function() {
+  isHovered = !isHovered;
+
+  if (isHovered) {
+    var elementos = document.querySelectorAll('.menu-item a');
+    elementos.forEach(function(elemento) {
+      elemento.style.display = 'block';
+    });
+
+  } else {
+    var elementos = document.querySelectorAll('.menu-item a');
+    elementos.forEach(function(elemento) {
+    elemento.style.display = 'none';
+    });
+  }
+});
+
+
+/**opcion para activar menu */
+function obtenerAnchoPagina() {
+  var anchoPagina = window.innerWidth;
+  if (anchoPagina>768) {
+    var elementos = document.querySelectorAll('.menu-item a');
+    elementos.forEach(function(elemento) {
+      elemento.style.display = 'block';
+    });
+  }
+}
+window.addEventListener('resize', obtenerAnchoPagina);
+obtenerAnchoPagina();

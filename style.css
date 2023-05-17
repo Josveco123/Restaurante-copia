@@ -189,8 +189,14 @@ input#check {
   header.main-header {
     margin-bottom: 4rem;
   }
+  .wrap-logo-header {
+  display:none;
+}
+.menu-item a {
+display:none;
+}
 
-  .header-wrap {
+.header-wrap {
     position: fixed;
     width: 100%;
     background-color: #fff;
@@ -351,6 +357,7 @@ background-color: #000;
   }
   #publico {
     margin-left: 100px;
+    margin-top: 150px;
 zoom: 1.4;
   }
   #carrusel {
